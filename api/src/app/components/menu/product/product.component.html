@@ -1,0 +1,21 @@
+<section>
+   <div class="product">
+
+      <div class="img">
+         <img [src]="'../../assets/imgs/' + product.foto" alt="">
+      </div>
+      <div class="menu_content">
+         <div class="title">
+            <h4>{{product.nombre}}</h4>
+            <p>{{product.descripcion}}</p>
+         </div>
+         <nz-rate id="start" [(ngModel)]="valor" nzAllowHalf nzDisabled></nz-rate>
+      </div>
+      <div id="footer">
+         <p>{{product.precio}} €</p>
+         <div class="btn" (click)="addProduct(product.id)"><i class="bi bi-plus-circle"></i></div>
+      </div>
+
+   </div>
+
+</section>

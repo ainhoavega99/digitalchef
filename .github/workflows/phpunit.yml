@@ -1,0 +1,64 @@
+name: PHPUnit Test
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  php-tests:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: MENU
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping --silent" --health-interval=10s --health-timeout=5s --health-retries=3
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+        
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          
+      - name: Copiar .envLocal a .env
+        run: cp back/php/Conexion/.envLocal back/php/Conexion/.env
+        
+      - name: Cache de paquetes de Composer
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: back/php/vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
+            
+      - name: Instalar dependencias
+        run: |
+          cd back/php/
+          composer install --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+          
+      - name: Establecer permisos para PHPUnit
+        run: chmod +x back/php/vendor/bin/phpunit
+        
+      - name: Cargar volcado de la base de datos
+        run: mysql -h 127.0.0.1 -P 3306 -u root -proot --binary-mode=1 MENU < back/mysql/dump.sql
+        
+      - name: Comprobar conexión MySQL
+        run: mysqladmin -h 127.0.0.1 -P 3306 -u root -proot status
+        
+      - name: Ejecutar pruebas con PHPUnit en la carpeta Recursos
+        run: |
+          ./back/php/vendor/bin/phpunit back/php/Recursos/
+
+      - name: Ejecutar pruebas con PHPUnit en la carpeta Comun
+        run: |
+          ./back/php/vendor/bin/phpunit back/php/Comun/

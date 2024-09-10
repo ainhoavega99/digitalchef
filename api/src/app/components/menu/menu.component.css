@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Courgette&family=LXGW+WenKai+TC&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image: url("../../../assets/imgs/fondo1.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#btn-list {
+  border: none;
+  background-color: #842f84;
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 100px;
+  z-index: 100;
+  right: 25vw;
+  width: 50%;
+  color: white;
+  text-align: center;
+  font-family: "LXGW WenKai TC";
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: 10px;
+  max-width: 90vw;
+}
+
+.carta {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: rgba(51, 81, 78, 0.7);
+  padding-top: 10px;
+  padding: 16px;
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-around;
+  background-color: rgb(51, 81, 78);
+  padding: 21px 0px;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+nav a {
+  padding: 10px;
+  font-family: "LXGW WenKai TC";
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  border-radius: 10px 0 10px 0;
+  background-color: white;
+  color: rgb(51, 81, 78);
+}
+
+.list {
+  display: none;
+  transition: all 0.3s ease;
+  position: absolute;
+  width: 100vw;
+  background-color: white;
+}
+
+#list-btn:checked ~ .list {
+  display: block;
+  z-index: 100;
+  min-height: 100vh;
+}
+
+#list-btn {
+  display: none;
+}
+
+#list-btn:checked ~ .menu {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .menu {
+    padding: 0;
+  }
+  .carta {
+    width: 63vw;
+    gap: 20px;
+    justify-items: center;
+    background-color: transparent;
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid {
+    padding-top: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .list {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+  #btn-list {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .carta {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 63vw;
+  }
+  .list-group-item h3 {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=menu.component.css.map */

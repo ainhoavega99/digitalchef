@@ -1,0 +1,4 @@
+node_modules
+enviromentLocal.ts
+environment.ts
+/dist/

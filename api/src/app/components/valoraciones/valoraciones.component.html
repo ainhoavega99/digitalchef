@@ -1,0 +1,13 @@
+<div class="valoraciones">
+    <div class="button">
+        <button type="button" class="form-submit btn" (click)="closeOrder()">Finalizar
+            Valoración</button>
+    </div>
+    <h1>Valoraciones</h1>
+    <div class="grupo">
+
+        @for (item of list; track item.id) {
+        <app-valoracion-producto [producto]="item"></app-valoracion-producto>
+        }
+    </div>
+</div>

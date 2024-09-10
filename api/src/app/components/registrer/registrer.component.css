@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=LXGW+WenKai+TC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.signup {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  background-image: url("../../../assets/imgs/book-table-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.form-group:last-child {
+  margin-bottom: 0px;
+}
+
+.signup-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.signup-button a {
+  text-decoration: none;
+  font-family: "Cactus Classical Serif", serif;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+.signup-button a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.signup-form h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.signup-content {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 6px 30px;
+  font-family: Poppins;
+  box-sizing: border-box;
+}
+
+.form-button:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.form-submit {
+  display: inline-block;
+  background: #6dabe4;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 15px 39px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.form-group input {
+  background-color: rgba(130, 118, 107, 0.8);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+.form-group ::-moz-placeholder {
+  color: white;
+}
+.form-group ::placeholder {
+  color: white;
+}
+
+form {
+  width: 70%;
+}
+
+.form-button {
+  display: flex;
+  padding: 10px;
+}
+.form-button input {
+  width: 70%;
+  background-color: rgba(13, 11, 9, 0.82);
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+#signup {
+  color: white;
+}
+
+@media (min-width: 800px) {
+  .signup-form {
+    width: 70%;
+  }
+  .signup-form .form-button {
+    width: 70%;
+  }
+  .register-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group {
+    width: 90%;
+  }
+  .signup-button {
+    text-align: right;
+    margin: 10px;
+  }
+  .signup-button a {
+    color: black;
+  }
+  .signup {
+    height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .signup {
+    height: 100vh;
+  }
+}/*# sourceMappingURL=registrer.component.css.map */

@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=LXGW+WenKai+TC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.signup {
+  background-image: url("../../../assets/imgs/login.jpg");
+  height: 100vh;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+}
+
+.signup,
+.recuperar {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form-group:last-child {
+  margin-bottom: 0px;
+}
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.signup-form h2 {
+  color: #2e1130;
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 30px;
+}
+
+.signup-content {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.signup-content #registrer-form {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #999;
+  padding: 6px 30px;
+  font-family: Poppins;
+  box-sizing: border-box;
+}
+
+.form-button:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+.form-submit {
+  display: inline-block;
+  background: #6dabe4;
+  color: #fff;
+  border-bottom: none;
+  width: auto;
+  padding: 15px 39px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  overflow: hidden;
+  width: 70%;
+}
+.form-group input {
+  background-color: rgba(105, 105, 105, 0.829);
+  color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+.form-group ::-moz-placeholder {
+  color: white;
+}
+.form-group ::placeholder {
+  color: white;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+.form-button input {
+  width: 70%;
+  background-color: rgba(245, 222, 179, 0.815);
+  color: rgb(59, 46, 72);
+  font-family: "Cactus Classical Serif", serif;
+  font-weight: bold;
+}
+
+a {
+  color: white;
+  font-family: "Cactus Classical Serif", serif;
+  font-size: 1.2rem;
+  padding: 5px;
+  text-decoration: none;
+}
+a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+#email-pass {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button.email-pass {
+  border: none;
+  background-color: rgba(245, 222, 179, 0.815);
+  color: black;
+  padding: 10px;
+}
+
+#no-cuenta {
+  padding: 10px;
+  text-align: right;
+}
+#no-cuenta a {
+  font-size: 1.2rem;
+  padding: 5px;
+  text-decoration: none;
+}
+#no-cuenta a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.recuperar {
+  background-image: url("../../../assets/imgs/login.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+}
+
+#recuper-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+button.email-pass {
+  color: rgb(59, 46, 72);
+  font-family: "Cactus Classical Serif", serif;
+  font-weight: bold;
+}
+
+@media (min-width: 800px) {
+  .signup {
+    height: -moz-min-content;
+    height: min-content;
+  }
+  #registrer-form {
+    width: 70%;
+  }
+  .signup-content #registrer-form {
+    width: 70%;
+  }
+}
+@media (min-width: 1024px) {
+  #registrer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #registrer-form div {
+    width: 70%;
+  }
+  #registrer-form .form-button {
+    width: 30vw;
+  }
+  .signup {
+    height: 100vh;
+  }
+  #email-pass {
+    width: 55%;
+  }
+}/*# sourceMappingURL=login.component.css.map */
