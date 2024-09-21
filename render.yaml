@@ -39,13 +39,6 @@ services:
       - type: http
         source: /
         destination: http://php-service:80
-    disk:
-      name: php-storage
-      mountPath: /var/www/html/php
-      sizeGB: 2
     dependsOn:
       - mysql-service
       - angular-service
-
-networks:
-  - name: red-network
